@@ -1,17 +1,4 @@
+<navbar [users]="users"></navbar>
 <div class="container my-4">
-  <div class="row">
-    <div class="col">
-      <user-form
-        [user]="userSelected"
-        (newUserEventEmitter)="addUser($event)"
-      ></user-form>
-    </div>
-    <div class="col">
-      <user
-        [users]="users"
-        (idUserEventEmitter)="removeUser($event)"
-        (selectedUserEventEmitter)="setSelectedUser($event)"
-      ></user>
-    </div>
-  </div>
+  <router-outlet> </router-outlet>
 </div>
